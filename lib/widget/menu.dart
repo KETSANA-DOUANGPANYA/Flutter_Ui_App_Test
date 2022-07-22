@@ -1,3 +1,4 @@
+import 'package:app_diary/screens/listScreen.dart';
 import 'package:flutter/material.dart';
 
 class MenuFragment extends StatelessWidget {
@@ -36,35 +37,43 @@ class MenuFragment extends StatelessWidget {
                         color: Colors.white,
                         shape: BoxShape.circle,
                       ),
-                      child: Icon(Icons.menu,color: Colors.blue,)
-                  ),
+                      child: Icon(
+                        Icons.menu,
+                        color: Colors.blue,
+                      )),
                 ),
-                Text(
-                    "Good Morning \nTplus",
+                Text("Good Morning \nTplus",
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white
-                    )
+                        color: Colors.white)),
+                SizedBox(
+                  height: 100,
                 ),
-                SizedBox(height: 50,),
                 Expanded(
                   child: ListView(
                     children: [
                       ListTile(
                         leading: Icon(Icons.map),
                         title: Text("Location"),
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       ListTile(
-                        leading: Icon(Icons.phone,),
+                        leading: Icon(
+                          Icons.phone,
+                        ),
                         title: Text("Phone"),
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       ListTile(
                         leading: Icon(Icons.album),
                         title: Text("List"),
-                        onTap: (){
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ListDetail()),
+                          );
                         },
                       ),
                       ListTile(
@@ -72,21 +81,21 @@ class MenuFragment extends StatelessWidget {
                         title: Text("Photo"),
                         subtitle: Text("Subtitle Text"),
                         trailing: Icon(Icons.delete),
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       ListTile(
                         leading: Icon(Icons.image),
                         title: Text("Photo"),
                         subtitle: Text("Subtitle Text"),
                         trailing: Icon(Icons.delete),
-                        onTap: (){},
+                        onTap: () {},
                       ),
                       ListTile(
                         leading: Icon(Icons.image),
                         title: Text("Photo"),
                         subtitle: Text("Subtitle Text"),
                         trailing: Icon(Icons.delete),
-                        onTap: (){},
+                        onTap: () {},
                       ),
                     ],
                   ),

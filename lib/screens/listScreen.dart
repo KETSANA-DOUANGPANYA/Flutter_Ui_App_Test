@@ -5,6 +5,18 @@ class ListDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final items = List<String>.generate(100, (i) => "Item $i");
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("ListData"),
+        ),
+        body: ListView.builder(
+            itemCount: items.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text('${items[index]}'),
+                onTap: () {},
+              );
+            }));
   }
 }

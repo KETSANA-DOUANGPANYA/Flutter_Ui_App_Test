@@ -16,9 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   //list of widgets to call ontap
   List widgetOptions = [
-     MenuFragment(),
-     HomeFragment(),
-     SettingFragment(),
+    MenuFragment(),
+    HomeFragment(),
+    SettingFragment(),
   ];
 
   //State tab when action bottom bar
@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
       selectedIndex = index;
     });
   }
+
   // final widgetTitle = ["Menu", "Home", "Setting"];
   @override
   Widget build(BuildContext context) {
@@ -58,8 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onTap: onItemTapped,
         selectedLabelStyle: TextStyle(color: Colors.red, fontSize: 20),
         unselectedFontSize: 15,
-        selectedIconTheme:
-            IconThemeData(size: 30.0),
+        selectedIconTheme: IconThemeData(size: 30.0),
         unselectedItemColor: Colors.blue,
       ),
     );
